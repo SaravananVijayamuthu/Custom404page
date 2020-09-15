@@ -1,0 +1,23 @@
+{
+  "name": "custom404page",
+  "version": "1.0.0",
+  "description": "Custom 404 Page in Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saravananraghul/Custom404page.git"
+  },
+  "author": "Saravanan Vijayamuthu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saravananraghul/Custom404page/issues"
+  },
+  "homepage": "https://github.com/saravananraghul/Custom404page#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}

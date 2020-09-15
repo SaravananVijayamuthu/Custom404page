@@ -1,5 +1,7 @@
 const express = require('express');
 const path = require('path');
+const serverless = require("serverless-http");
+const router = express.Router();
 
 //set up the Express app
 const app = express();
@@ -8,21 +10,22 @@ const app = express();
 app.use(express.json());
 
 // Routes
-app.get( "/", (req, res) => {
+router.get( "/", (req, res) => {
     res.json({data: "Hi Checking Route"});
 });
-app.get( "/example1", (req, res) => {
+
+router.get( "/example1", (req, res) => {
     res.json({data: "Hi Checking Route__1"});
 });
 
 // 404 Route
-app.use((req, res, next) => {
+router.use((req, res, next) => {
     res.status(404).sendFile(path.join(__dirname + '/404.html'));
 });
 
 
 //listen
-const PORT = 3000;
-app.listen(PORT, console.log(` Server is running at ${PORT}`));
+app.use(`/.netlify/functions/index`, router);
 
 module.exports = app;
+module.exports.handler = serverless(app);

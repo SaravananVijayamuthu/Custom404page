@@ -19,9 +19,6 @@
   },
   "homepage": "https://github.com/saravananraghul/Custom404page#readme",
   "dependencies": {
-    "ejs": "^3.1.5",
-    "express": "^4.17.1",
-    "netlify-cli": "^2.63.0",
-    "netlify-lambda": "^2.0.1"
+    "express": "^4.17.1"
   }
 }
